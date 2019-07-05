@@ -1,7 +1,10 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  var sass = require('node-sass');
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
+
 
   // Project configuration.
   grunt.initConfig({
@@ -14,10 +17,6 @@ module.exports = function(grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     watch: {
-      scsslint: {
-        files: 'scss/**/*.scss',
-        tasks: ['scsslint']
-      },
       css: {
         files: 'scss/**/*.scss',
         tasks: ['sass']
@@ -25,7 +24,7 @@ module.exports = function(grunt) {
     },
     sass: {
       options: {
-        outputStyle: 'compressed'
+        implementation: sass
       },
       dist: {
         files: {
@@ -47,9 +46,7 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-scss-lint');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'scsslint', 'watch']);
+  grunt.registerTask('default', ['sass', 'watch']);
 };
