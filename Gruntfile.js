@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       },
       queries: {
         files: {
-            'queries.css' : 'scss/queries.scss'
+            'dist/queries.css' : 'scss/queries.scss'
         }
       }
     },
