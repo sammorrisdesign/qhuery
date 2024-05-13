@@ -16,13 +16,8 @@
     "url": "https://github.com/sammorrisdesign/qwhuery/issues"
   },
   "homepage": "https://github.com/sammorrisdesign/qwhuery",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^3.0.2",
-    "load-grunt-tasks": "^5.0.0",
-    "node-sass": "^4.12.0",
-    "time-grunt": "^1.0.0"
-  },
-  "dependencies": {}
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "sass": "^1.77.1"
+  }
 }

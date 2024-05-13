@@ -7,7 +7,7 @@ A stupid sass experiment with colours. It generates 36000 media queries that cha
 
 Visit the [live site](http://www.qhuery.com) (Warning, might kill your browser). Here's a gif preview just in case.
 
-![Preview](preview.gif)
+![Preview](src/preview.gif)
 
 ## Requirements
 
